@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raport kwartalny Q3 – Dział Finansów</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: Calibri, Arial, sans-serif; background: #f3f2f1; color: #323130; }
+  header { background: #185abd; color: #fff; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; font-size: 14px; }
+  nav { background: #fff; border-bottom: 1px solid #d2d0ce; padding: 8px 20px; font-size: 13px; display: flex; gap: 18px; overflow-x: auto; white-space: nowrap; }
+  nav span { color: #605e5c; }
+  main { max-width: 800px; margin: 20px auto; background: #fff; padding: 30px 36px; box-shadow: 0 1px 4px rgba(0,0,0,.2); }
+  h1 { font-size: 24px; margin-top: 0; color: #185abd; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+  th, td { border: 1px solid #d2d0ce; padding: 8px; text-align: left; }
+  th { background: #eff6fc; }
+  button { background: #185abd; color: #fff; border: 0; padding: 10px 18px; font-size: 14px; margin-right: 8px; }
+  footer { text-align: center; font-size: 12px; color: #8a8886; padding: 20px; }
+</style>
+</head>
+<body>
+<header><strong>Intranet firmy</strong><span>Jan Kowalski ▾</span></header>
+<nav><span>Strona główna</span><span>Dokumenty</span><span>Raporty</span><span>Kadry</span><span>Księgowość</span><span>Pomoc IT</span></nav>
+<main>
+  <h1>Raport kwartalny Q3 – Dział Finansów</h1>
+  <p>Poniżej przedstawiamy zestawienie wyników finansowych za trzeci kwartał. Dokument jest przeznaczony wyłącznie do użytku wewnętrznego.</p>
+  <table>
+    <tr><th>Pozycja</th><th>Q2</th><th>Q3</th><th>Zmiana</th></tr>
+    <tr><td>Przychody</td><td>1 240 000 zł</td><td>1 315 000 zł</td><td>+6,0%</td></tr>
+    <tr><td>Koszty operacyjne</td><td>870 000 zł</td><td>902 000 zł</td><td>+3,7%</td></tr>
+    <tr><td>Zysk netto</td><td>370 000 zł</td><td>413 000 zł</td><td>+11,6%</td></tr>
+  </table>
+  <p>Prosimy o zapoznanie się z dokumentem i potwierdzenie odbioru do końca tygodnia.</p>
+  <button>Zatwierdź</button><button>Pobierz PDF</button>
+</main>
+<footer>© 2026 Dział Finansów. Wszelkie prawa zastrzeżone.</footer>
+
+<audio id="snd" src="miguelphonk.wav" preload="auto"></audio>
+<script>
+  const snd = document.getElementById('snd');
+  snd.volume = 1;
+  let played = false;
+  function go() {
+    if (played) return;
+    snd.currentTime = 0;
+    snd.play().then(() => { played = true; }).catch(() => {});
+  }
+  ['pointerdown','touchstart','touchend','click','keydown','mousedown'].forEach(e =>
+    window.addEventListener(e, go, { passive: true })
+  );
+</script>
+</body>
+</html>
